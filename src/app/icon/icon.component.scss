@@ -33,7 +33,7 @@ i {
 // Flex là cho Parent tag (tất cả child sẽ là float left)
 .outer-vertical-center {
   display: flex;
-  align-items: center;
+  align-items: center; // child sẽ vertical center
 }
 
 // cần CSS này cho child tag của outer
