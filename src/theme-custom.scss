@@ -1,0 +1,78 @@
+/**
+ *  jump to file dưới đây để search SCSS functions mixin, variables và cách dùng => Ctrl+ shift + O
+ *  @import ở file SCSS này chỉ có functions và variables => nghĩa là chưa có bất kỳ CSS nào đc apply
+ *  muốn apply ta phải @include functions và variables vào thì mới đc
+ */
+@import '~@angular/material/theming';
+
+// @Include the common styles of Angular Material for the whole project
+// phải có và chỉ gọi 1 lần cho toàn app
+@include mat-core();
+
+// ==================================== Default theme ======================================
+//jump to @import sccs file ở trên và search cho các functions, variables ở đây thì sẽ hiểu
+// mat-palette() là function
+// $candy-app-primary: là 1 class đc trả về bởi mat-palette() function
+// $mat-indigo: là dải màu xanh => https://material.io/design/color/the-color-system.html#tools-for-picking-colors
+$candy-app-primary: mat-palette($mat-indigo); // dùng default ko set màu
+$candy-app-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$candy-app-warn: mat-palette($mat-red); // dùng default ko set màu
+
+// CSS viết kiểu gì thì cuối cùng nó cũng về dạng {key1:value1; key2: value2}
+// theme gồm 3 màu cơ bản: primary, accent, warn
+$candy-app-theme: mat-light-theme(
+  (
+    color: (
+      primary: $candy-app-primary,
+      accent: $candy-app-accent,
+      warn: $candy-app-warn,
+    ),
+  )
+);
+
+// @Include: để apply theme cho toàn bộ project
+// @include angular-material-theme($candy-app-theme);
+
+// ==================================== Dark theme ======================================
+// Ctrl + click: để tìm màu phù hợp
+$dark-primary: mat-palette($mat-blue-grey);
+$dark-accent: mat-palette($mat-amber, A200, A100, A400);
+$dark-warn: mat-palette($mat-deep-orange);
+
+// CSS viết kiểu gì thì cuối cùng nó cũng về dạng {key1:value1; key2: value2}
+// theme gồm 3 màu cơ bản: primary, accent, warn
+$dark-theme: mat-dark-theme(
+  (
+    color: (
+      primary: $dark-primary,
+      accent: $dark-accent,
+      warn: $dark-warn,
+    ),
+  )
+);
+
+// Apply themes with a CSS => cuối cùng nó vẫn convert về dạng  .className{key1:value1; key2: value2}
+// cách 1: dùng CSS có thể đổi theme dễ dàng cho toàn project body, component, div
+.dark-theme {
+  @include angular-material-color($dark-theme);
+}
+
+// ==================================== theme for Material component ======================================
+// cách 3: Apply theme for component. Tất cả child của component đều đc apply theme
+// app-root {
+//   @include angular-material-color($candy-app-theme);
+// }
+
+// app-dialog-material {
+//   @include angular-material-color($candy-app-theme);
+// }
+
+// app-dialog-material2 {
+//   @include angular-material-color($dark-theme);
+// }
+
+// app-dialog-material2 {
+//   @import '@angular/material/prebuilt-themes/indigo-pink.css';
+// }

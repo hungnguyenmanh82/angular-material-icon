@@ -1,0 +1,39 @@
+<h2>icon.component:</h2>
+
+<p>
+  + cách này hiểu bản chất, dễ tùy biến trong mọi hoàn cảnh
+  <br />
+  + dùng cách này ko cần phải install Material Component và Material Theme
+  <br />
+  + chỉ cần add CSS vào index.html là ok. xem Link dưới:
+</p>
+
+<a href="https://www.w3schools.com/icons/google_icons_intro.asp"
+  >https://www.w3schools.com/icons/google_icons_intro.asp</a
+>
+<a href="https://fonts.google.com/icons?selected=Material+Icons&icon.query=+folder"
+  >https://fonts.google.com/icons?selected=Material+Icons&icon.query=+folder</a
+>
+
+<div>
+  <button><span class="material-icons"> folder </span> folder</button>
+
+  <!-- dùng cái này: Browser Debug F12 sẽ hiểu -->
+  <!-- phải để text trong span thì mới căn giữa Vertical center-->
+  <!-- phải để text trong span, div thì mới điều chỉnh position đc -->
+  <button>
+    <span class="material-icons" style="color: blue"> folder </span>
+    <span>folder</span>
+  </button>
+
+  <!-- dùng span và 'i' là như nhau. Nhưng 'i' ngắn hơn -->
+  <button>
+    <i class="material-icons" style="color: blueviolet"> folder </i>
+    <span>folder</span>
+  </button>
+
+  <button>
+    <span class="material-icons" style="color: blue; font-size: 48px"> folder </span>
+    <span>folder</span>
+  </button>
+</div>

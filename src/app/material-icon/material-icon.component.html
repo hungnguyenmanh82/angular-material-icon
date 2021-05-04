@@ -1,0 +1,27 @@
+<h2>material-icon.component:</h2>
+<p>
+  + Ko nên dùng material-icon component theo cách này => phải đi cùng material button css
+  <br />
+  + dùng icon css tối ưu hơn => dễ tùy biến các kiểu hơn.
+</p>
+<div>
+  <mat-icon>folder</mat-icon>
+
+  <mat-icon aria-hidden="false" aria-label="Example home icon">folder</mat-icon>
+
+  <button>
+    <mat-icon style="color: blue">folder</mat-icon>
+    <span>folder</span>
+  </button>
+
+  <button>
+    <mat-icon style="color: blue; font-size: 48px">folder</mat-icon>
+    <span>folder</span>
+  </button>
+
+  <!-- bị lỗi khi điều chỉnh size của icon -->
+  <button>
+    <mat-icon id="iconId1" style="color: blue; font-size: 48px">folder</mat-icon>
+    <span>folder</span>
+  </button>
+</div>

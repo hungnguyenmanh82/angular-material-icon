@@ -1,0 +1,10 @@
+//@import là cú pháp của SCSS  (ko phải của CSS) để include 1 css file khác vào)
+// các css ở folder: node_modules/@angular/material/prebuilt-themes/indigo-pink.css
+/* add theme theo cách này hay hơn là add ở Angular.json */
+// add vào component CSS sẽ ko có tác dụng => phải dùng Custome Theme mới đc
+// @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+// @import '@angular/material/prebuilt-themes/pink-bluegrey.css';
+// @import "@angular/material/prebuilt-themes/purple-green.css";
+
+/* có thể @import CSS trực tiếp ở CSS của component*/
