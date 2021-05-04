@@ -1,0 +1,24 @@
+button {
+  font-family: Arial;
+  // background-color: #42a948;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+  margin: 15px;
+}
+button:hover {
+  opacity: 0.8;
+}
+button:disabled {
+  // background-color: #eee;
+  color: #aaa;
+  cursor: auto;
+}
+//======================================================
+// cả text và icon ta đều để trong span để vertical center
+span {
+  vertical-align: middle; // để text và icon ở giữa Button
+  // vertical-align: -5px;   //điều chỉnh giá trị này
+}
