@@ -28,3 +28,35 @@ i {
   vertical-align: middle; // để text và icon ở giữa Button
   // vertical-align: -5px;   //điều chỉnh giá trị này
 }
+
+// cần CSS này cho Parent Tag để các child tag vertical center
+// Flex là cho Parent tag (tất cả child sẽ là float left)
+.outer-vertical-center {
+  display: flex;
+  align-items: center;
+}
+
+// cần CSS này cho child tag của outer
+// i, span: đã khai báo rồi
+.inner-vertical-center {
+  vertical-align: middle; // để text và icon ở giữa Button
+}
+
+button.item {
+  font-family: Arial;
+  text-align: left;
+  background-color: gainsboro;
+  border: none;
+  cursor: pointer;
+  cursor: hand;
+  height: 40px;
+  width: 100%;
+}
+
+button.item:hover {
+  background-color: yellow;
+}
+
+button.item:focus {
+  background-color: greenyellow;
+}
