@@ -1,3 +1,4 @@
+import { FontAwesomeIconComponent } from './font-awesome-icon/font-awesome-icon.component';
 import { BootstrapIconComponent } from './bootstrap-icon/bootstrap-icon.component';
 import { MaterialButtonIconComponent } from './material-button-icon/material-button-icon.component';
 import { MaterialIconComponent } from './material-icon/material-icon.component';
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'material-icon', component: MaterialIconComponent },
   { path: 'material-button-icon', component: MaterialButtonIconComponent },
   { path: 'bootstrap-icon', component: BootstrapIconComponent },
+  { path: 'font-awesome-icon', component: FontAwesomeIconComponent },
 ];
 
 @NgModule({

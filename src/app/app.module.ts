@@ -9,9 +9,10 @@ import { IconComponent } from './icon/icon.component';
 import { MaterialIconComponent } from './material-icon/material-icon.component';
 import { MaterialButtonIconComponent } from './material-button-icon/material-button-icon.component';
 import { BootstrapIconComponent } from './bootstrap-icon/bootstrap-icon.component';
+import { FontAwesomeIconComponent } from './font-awesome-icon/font-awesome-icon.component';
 
 @NgModule({
-  declarations: [AppComponent, IconComponent, MaterialIconComponent, MaterialButtonIconComponent, BootstrapIconComponent],
+  declarations: [AppComponent, IconComponent, MaterialIconComponent, MaterialButtonIconComponent, BootstrapIconComponent, FontAwesomeIconComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
